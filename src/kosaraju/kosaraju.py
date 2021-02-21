@@ -1,6 +1,3 @@
-# import sys
-
-# sys.path.append('../')
 from src.union_find.union_find import UnionFind
 
 
