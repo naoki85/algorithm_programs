@@ -6,11 +6,14 @@ class BellmanFord(object):
         self.__graph = graph
         self.__num_of_vertices = num_of_vertices
         n = self.__num_of_vertices + 1
-        self.__shortest_weights = [[0 for _ in range(n)] for _ in range(n)]
+        self.__shortest_weights = [[[0 for _ in range(n)] for _ in range(n)] for _ in range(n)]
         self.__before_vertices = None
+        self.__start_vertex = None
 
     def run(self, start_vertex, enable_path_trace=False):
         n = self.__num_of_vertices + 1
+        self.__start_vertex = start_vertex
+
         if enable_path_trace:
             self.__before_vertices = [[None for _ in range(n)] for _ in range(n)]
 
@@ -31,18 +34,18 @@ class BellmanFord(object):
                     if self.__graph[j][ei] is None:
                         continue
                     else:
-                        tmp = self.__shortest_weights[i - 1][ei] + self.__graph[j][ei]
+                        tmp = self.__shortest_weights[start_vertex][i - 1][ei] + self.__graph[j][ei]
                         if min_case2 > tmp:
                             min_case2 = tmp
                             w = ei
 
-                self.__shortest_weights[i][j] = min(case1, min_case2)
+                self.__shortest_weights[start_vertex][i][j] = min(case1, min_case2)
                 if enable_path_trace:
                     self.__before_vertices[i][j] = w
 
                 if start_vertex == j and i == self.__num_of_vertices:
-                    if self.__shortest_weights[i - 1][j] != self.__shortest_weights[i][j] and \
-                            self.__shortest_weights[i][j] < 0:
+                    if self.__shortest_weights[start_vertex][i - 1][j] != self.__shortest_weights[start_vertex][i][j] and \
+                            self.__shortest_weights[start_vertex][i][j] < 0:
                         self.__shortest_weights = None
                         return
 
@@ -52,7 +55,7 @@ class BellmanFord(object):
         if self.__shortest_weights is None:
             return None
         else:
-            return self.__shortest_weights[self.__num_of_vertices - 1][destination]
+            return self.__shortest_weights[self.__start_vertex][self.__num_of_vertices - 1][destination]
 
     def get_shortest_path(self, destination):
         if self.__before_vertices is None:

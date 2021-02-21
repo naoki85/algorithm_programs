@@ -12,3 +12,11 @@ def stop_watch(func):
         return result
 
     return wrapper
+
+
+def load_file(file_path):
+    input_data = []
+    with open(file_path) as f:
+        for line in f:
+            input_data.append(line.rstrip('\n'))
+    return input_data
