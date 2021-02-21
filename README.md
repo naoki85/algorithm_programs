@@ -27,6 +27,15 @@ d.run(1)
 d.get_shortest_weight(2)
 ```
 
+## Kosaraju
+
+```python
+edges = [[], [2], [1], [6], [], [8], [5], [3], [7]]
+k = Kosaraju(edges, 8)
+k.run()
+k.get_summary()
+```
+
 ## UnionFind
 
 ```python
