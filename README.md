@@ -42,6 +42,14 @@ k.run()
 k.get_summary()
 ```
 
+## MinIntHeap
+
+```python
+h = MinIntHeap()
+h.add(10)
+a = h.poll()
+```
+
 ## UnionFind
 
 ```python
