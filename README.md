@@ -27,6 +27,12 @@ d.run(1)
 d.get_shortest_weight(2)
 ```
 
+## Karatsuba
+
+```python
+Karatsuba.multiplication(10, 20)
+```
+
 ## Kosaraju
 
 ```python
