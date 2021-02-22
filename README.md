@@ -14,6 +14,15 @@ bf.run(1)
 bf.get_shortest_weight(2)
 ```
 
+## Binary Search Tree
+
+```python
+b = Bst(8)
+b.insert(4)
+b.insert(10)
+res = b.find_value_from_order(3)
+```
+
 ## Dijkstra
 
 ```python
