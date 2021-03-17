@@ -51,6 +51,16 @@ k.run()
 k.get_summary()
 ```
 
+## Lcs
+
+Compute the two letter "Longest Common Subsequence".  
+Referred to the content published in [Software Design](https://gihyo.jp/magazine/SD/archive/2021/202103).
+
+```python
+lcs = Lcs("SOFT", "OFF")
+lcs.calc()
+```
+
 ## MinIntHeap
 
 ```python
