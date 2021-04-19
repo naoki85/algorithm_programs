@@ -72,8 +72,7 @@ a = h.poll()
 ## Rotate 2D Array
 
 ```python
-r2a = Rotate2dArray([[1, 2], [3, 4]])
-res = r2a.turn_left90()
+res = Rotate2dArray.turn_left90([[1, 2], [3, 4]])
 ```
 
 ## UnionFind

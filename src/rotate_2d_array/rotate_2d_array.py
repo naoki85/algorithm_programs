@@ -2,41 +2,44 @@ import math
 
 
 class Rotate2dArray(object):
-    def __init__(self, array):
-        self.__array = array
-        x_size = len(self.__array)
+    @classmethod
+    def turn_left90(cls, array):
+        transposed = cls.__transpose(array)
+        return cls.__reverse(transposed)
+
+    @classmethod
+    def turn_left180(cls, array):
+        rotated = cls.turn_left90(array)
+        return cls.turn_left90(rotated)
+
+    @classmethod
+    def turn_left270(cls, array):
+        rotated = cls.turn_left180(array)
+        return cls.turn_left90(array)
+
+    @classmethod
+    def turn_right90(cls, array):
+        return cls.turn_left270(array)
+
+    @classmethod
+    def turn_right180(cls, array):
+        return cls.turn_left180(array)
+
+    @classmethod
+    def turn_right270(cls, array):
+        return cls.turn_left90(array)
+
+    @classmethod
+    def __reverse(cls, array):
+        return list(reversed(array))
+
+    @classmethod
+    def __transpose(cls, array):
+        x_size = len(array)
         if x_size > 0:
             for y in array:
                 y_size = len(y)
                 if x_size != y_size:
                     raise Exception("inappropriate matrix size")
 
-    def turn_left90(self):
-        self.__transpose()
-        self.__reverse()
-        return self.__array
-
-    def turn_left180(self):
-        self.turn_left90()
-        self.turn_left90()
-        return self.__array
-
-    def turn_left270(self):
-        self.turn_left180()
-        self.turn_left90()
-        return self.__array
-
-    def turn_right90(self):
-        return self.turn_left270()
-
-    def turn_right180(self):
-        return self.turn_left180()
-
-    def turn_right270(self):
-        return self.turn_left90()
-
-    def __reverse(self):
-        self.__array.reverse()
-
-    def __transpose(self):
-        self.__array = list(map(list, zip(*self.__array)))
+        return list(map(list, zip(*array)))

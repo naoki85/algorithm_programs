@@ -2,8 +2,7 @@ from rotate_2d_array import Rotate2dArray
 
 
 def test_left90(t, e):
-    r2a = Rotate2dArray(t)
-    res = r2a.turn_left90()
+    res = Rotate2dArray.turn_left90(t)
 
     if res == e:
         print("Test n = '%s' was successful." % len(res))
