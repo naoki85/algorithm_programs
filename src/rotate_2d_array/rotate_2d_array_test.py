@@ -1,14 +1,14 @@
 from rotate_2d_array import Rotate2dArray
 
 
-def test_left90(test_matrix, expected):
-    r2a = Rotate2dArray(test_matrix)
+def test_left90(t, e):
+    r2a = Rotate2dArray(t)
     res = r2a.turn_left90()
 
-    if res == expected:
+    if res == e:
         print("Test n = '%s' was successful." % len(res))
     else:
-        raise Exception("Test n = '%s' failed. expected: %s, actual: %s" % (len(res), expected, res))
+        raise Exception("Test n = '%s' failed. expected: %s, actual: %s" % (len(res), e, res))
 
 
 if __name__ == '__main__':
