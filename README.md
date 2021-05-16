@@ -61,6 +61,12 @@ lcs = Lcs("SOFT", "OFF")
 lcs.calc()
 ```
 
+## MergeSort
+
+```python
+MergeSort.exec([1, 2, 3, 4, 5])
+```
+
 ## MinIntHeap
 
 ```python
