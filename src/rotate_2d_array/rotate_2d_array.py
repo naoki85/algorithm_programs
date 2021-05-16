@@ -1,6 +1,3 @@
-import math
-
-
 class Rotate2dArray(object):
     @classmethod
     def turn_left90(cls, array):
@@ -15,7 +12,7 @@ class Rotate2dArray(object):
     @classmethod
     def turn_left270(cls, array):
         rotated = cls.turn_left180(array)
-        return cls.turn_left90(array)
+        return cls.turn_left90(rotated)
 
     @classmethod
     def turn_right90(cls, array):
