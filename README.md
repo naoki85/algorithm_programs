@@ -75,6 +75,12 @@ h.add(10)
 a = h.poll()
 ```
 
+## QuickSort
+
+```python
+QuickSort.exec([1, 2, 3, 4, 5])
+```
+
 ## Rotate 2D Array
 
 ```python
