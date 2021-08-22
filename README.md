@@ -37,6 +37,12 @@ d.run(1)
 d.get_shortest_weight(2)
 ```
 
+## Eratosthenes 
+
+```python
+Eratosthenes.search(10)
+```
+
 ## Karatsuba
 
 ```python
