@@ -94,6 +94,17 @@ QuickSort.exec([1, 2, 3, 4, 5])
 res = Rotate2dArray.turn_left90([[1, 2], [3, 4]])
 ```
 
+## TopologicalSort
+
+```python
+number_of_vertices = 6
+number_of_edges = 6
+edges = [[0, 1], [1, 2], [3, 1], [3, 4], [4, 5], [5, 2]]
+
+ts = TopologicalSort(number_of_vertices, number_of_edges, edges)
+sorted_list = ts.run()
+```
+
 ## UnionFind
 
 ```python
