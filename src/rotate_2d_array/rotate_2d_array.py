@@ -1,8 +1,7 @@
 class Rotate2dArray(object):
     @classmethod
     def turn_left90(cls, array):
-        transposed = cls.__transpose(array)
-        return cls.__reverse(transposed)
+        return cls.transpose(array)
 
     @classmethod
     def turn_left180(cls, array):
@@ -27,11 +26,7 @@ class Rotate2dArray(object):
         return cls.turn_left90(array)
 
     @classmethod
-    def __reverse(cls, array):
-        return list(reversed(array))
-
-    @classmethod
-    def __transpose(cls, array):
+    def transpose(cls, array):
         x_size = len(array)
         if x_size > 0:
             for y in array:
@@ -39,4 +34,4 @@ class Rotate2dArray(object):
                 if x_size != y_size:
                     raise Exception("inappropriate matrix size")
 
-        return list(map(list, zip(*array)))
+        return list(map(list, zip(*array)))[::-1]
