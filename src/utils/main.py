@@ -20,3 +20,9 @@ def load_file(file_path):
         for line in f:
             input_data.append(line.rstrip('\n'))
     return input_data
+
+
+def assert_equals(expected, actual):
+    if expected != actual:
+        print('mismatch: expected: %s, actual: %s' % (expected, actual))
+        raise Exception

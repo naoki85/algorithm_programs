@@ -2,6 +2,14 @@
 These are algorithm programs I created myself.  
 My Blog is [here](https://www.notion.so/naoki85/bcb265ad5edc493183984921c9a91270?v=0a92bc7ee9a544519f0b3615ebb1ea77)
 
+## BalancedBinarySearchTree
+
+```python
+b = BalancedBinarySearchTree(5)
+b.append(3)
+a = b.find_l(12)
+```
+
 ## BellmanFord
 
 ```python
